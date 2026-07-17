@@ -1,0 +1,32 @@
+{
+  "name": "gh-relay",
+  "version": "1.0.0",
+  "description": "GitHub CLI wrapper that auto-generates GitHub App installation tokens",
+  "packageManager": "bun@1.3.14",
+  "type": "module",
+  "bin": {
+    "gh": "./dist/gh"
+  },
+  "scripts": {
+    "build": "bun build --compile ./src/index.ts --outfile ./dist/gh",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@types/bun": "^1.3",
+    "eslint": "^10.7.0",
+    "jiti": "^2.7.0",
+    "prettier": "^3.9.5",
+    "typescript": "^5.8",
+    "typescript-eslint": "^8.64.0"
+  },
+  "dependencies": {
+    "@octokit/auth-app": "^8.2.0"
+  }
+}
